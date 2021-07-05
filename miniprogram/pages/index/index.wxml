@@ -1,3 +1,13 @@
 <view>
-  <navbar title="首页"></navbar>
+  <!-- <navbar title="首页"></navbar> -->
+  <view class="bg-gradual-blue banner">
+    <view class="bg-white input-container padding-sm clear">
+      <view class="fl">
+        <input placeholder="输入订单号" maxlength="100" />
+      </view>
+      <view class="fr">
+        <icon class="cuIcon-search"></icon>
+      </view>
+    </view>
+  </view>
 </view>
