@@ -1,0 +1,53 @@
+<view>
+  <view class="f-pr">
+    <view class="avatar-bg"></view>
+    <image src="../../images/me-bg.png" style="width:100%"></image>
+    <view style="top: 260rpx; width: 100%;" class="text-center f-pa">
+      <!-- <view class="cu-avatar round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view> -->
+      <block wx:if="{{canIUseOpenData}}" class="userinfo-opendata">
+        <view class="userinfo-block-avatar">
+          <open-data class="cu-avatar round f-oh" type="userAvatarUrl"></open-data>
+        </view>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button 
+          wx:if="{{canIUseGetUserProfile}}" 
+          bindtap="getUserProfile"
+          class="userinfo-avatar"
+          style="background-image: url({{avatarUrl}})"
+          size="default"
+        >头像</button>
+        <button
+          wx:else
+          open-type="getUserInfo" 
+          bindgetuserinfo="onGetUserInfo"
+          class="userinfo-avatar"
+          style="background-image: url({{avatarUrl}})"
+          size="default"
+        >头像</button>
+      </block>
+      <view class="text-center text-white " style="margin-top: 20rpx"> {{userInfo.nickname}} </view>
+    </view>
+  </view>
+
+  <view class="cu-list menu sm-border card-menu margin-top">
+    <view class="cu-item arrow" >
+      <view class="content" catchtap="navto" data-url="../resetPwd/resetPwd">
+        <text class="cuIcon-command text-grey"></text>
+        <text class="text-grey">修改密码</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" >
+      <view class="content" catchtap="navto" data-url="../userinfo/userinfo">
+        <text class="cuIcon-info text-grey"></text>
+        <text class="text-grey">个人信息</text>
+      </view>
+    </view>
+    <view class="cu-item arrow" >
+      <view class="content" catchtap="logout">
+        <text class="cuIcon-pullleft text-red"></text>
+        <text class="text-red">退出</text>
+      </view>
+    </view>
+  </view>
+</view>

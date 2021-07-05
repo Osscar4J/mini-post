@@ -1,0 +1,16 @@
+/**app.wxss**/
+@import 'colorui/main.wxss';
+@import 'colorui/icon.wxss';
+
+.f-pr {
+  position: relative;
+}
+.f-pa {
+  position: absolute;
+}
+.f-pf {
+  position: fixed;
+}
+.w-80 { width: 80%; }
+.w-100 { width: 100%; }
+.f-oh { overflow: hidden; }

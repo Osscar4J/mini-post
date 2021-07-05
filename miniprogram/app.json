@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundColor": "#0081ff",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#0081ff",
+    "navigationBarTitleText": "我的快递",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#0081ff",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home0.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/user0.png",
+        "selectedIconPath": "images/user1.png"
+      }
+    ]
+  }
+}

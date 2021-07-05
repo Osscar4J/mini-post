@@ -1,0 +1,19 @@
+/* miniprogram/pages/me/me.wxss */
+.avatar-bg {
+  background-color:#11aeff;
+  height:200rpx;
+}
+.cu-avatar {
+  width: 200rpx;
+  height: 200rpx;
+}
+.userinfo-avatar {
+  width: 140rpx !important;
+  height: 140rpx !important;
+  border-radius: 50%;
+  line-height: 58rpx;
+  font-size: 16px;
+  font-weight: 400;
+  background-size: cover;
+  background-color: white;
+}
