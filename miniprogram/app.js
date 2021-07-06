@@ -14,6 +14,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      baseApi: 'https://chachacha.top/api/'
+    }
   }
 })

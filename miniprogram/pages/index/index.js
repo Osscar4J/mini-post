@@ -1,4 +1,5 @@
 //index.js
+import CommonAPi from "../../api/commonApi"
 const app = getApp()
 
 Page({
@@ -14,17 +15,28 @@ Page({
   },
 
   onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
-    }
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true,
       })
     }
+    wx.login({
+      timeout: 1000,
+      success: function(res){
+        CommonAPi.login({
+          data: {code: res.code},
+          success: function(e){
+            console.log(e)
+          }
+        })
+      },
+      fail: function(res){
+        wx.showToast({
+          icon: 'error',
+          title: res.errMsg,
+        })
+      }
+    })
   },
 
   getUserProfile() {
