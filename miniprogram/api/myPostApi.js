@@ -1,10 +1,11 @@
 import BaseApi from './baseRequest';
 
+const baseUrl = 'post/';
+
 export default {
-  login: function(params){
+  query: function(params){
     params = params || {}
-    params.url = 'loginByMiniProgram';
-    params.method = 'POST'
+    params.url = baseUrl + 'query/' + params.data.postNo;
     return BaseApi.request(params);
   }
 }

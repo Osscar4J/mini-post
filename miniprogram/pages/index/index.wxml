@@ -3,10 +3,10 @@
   <view class="bg-gradual-blue banner">
     <view class="bg-white input-container padding-sm clear">
       <view class="fl">
-        <input placeholder="输入订单号" maxlength="100" />
+        <input placeholder="输入订单号" maxlength="100" bindinput="bindInput" data-postNo="postNo" confirm-type="getPostInfo" bindconfirm="getPostInfo" />
       </view>
       <view class="fr">
-        <icon class="cuIcon-search"></icon>
+        <icon class="cuIcon-search" bindtap="getPostInfo"></icon>
       </view>
     </view>
   </view>

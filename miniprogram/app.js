@@ -15,7 +15,9 @@ App({
     }
 
     this.globalData = {
-      baseApi: 'https://chachacha.top/api/'
+      baseApi: 'https://chachacha.top/api/',
+      token: null,
+      userInfo: null
     }
   }
 })
