@@ -23,8 +23,12 @@
       </block>
     </view>
   </view>
+  <view wx:else style="margin-top: 700rpx;">
+    <view class="text-grey text-center">
+      <view>
+        <icon class="cuIcon-explore" style="font-size:200%"></icon>
+      </view>
+      <view>暂无结果</view>
+    </view>
+  </view>
 </view>
-
-<template name="timeline">
-  
-</template>
