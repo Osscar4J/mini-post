@@ -10,4 +10,21 @@
       </view>
     </view>
   </view>
+  <view class="timeline" wx:if="{{postInfo !== null}}">
+    <view class="cu-timeline">
+      <block wx:for="{{ postInfo }}" wx:key="id">
+        <view class="cu-time"></view>
+        <view class="cu-item {{ index==0 ? 'text-blue': '' }}">
+          <view class="content shadow-blur">
+            <view class="{{ index==0 ? 'text-blue': '' }}">{{ item.postTimeFormat }}</view>
+            <view>{{item.info}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>
+
+<template name="timeline">
+  
+</template>

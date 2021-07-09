@@ -7,7 +7,8 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
-    postNo: null
+    postNo: null,
+    postInfo: null,
   },
 
   onLoad: function() {
@@ -44,8 +45,29 @@ Page({
   },
 
   getPostInfo: async function(e){
-    let res = await MyPostApi.query({ data: { postNo: this.data.postNo } })
-    console.log(res)
+    let postNo = this.data.postNo != null ? this.data.postNo.trim() : ''
+    if (!postNo){
+      wx.showToast({
+        title: '请输入订单号',
+        icon: 'error'
+      })
+      return false
+    }
+    wx.showToast({
+      title: '正在查询...',
+      icon: 'loading',
+      mask: true,
+      duration: 10000
+    })
+    let res = await MyPostApi.query({ data: { postNo: postNo } })
+    let postList = res.data.content||[]
+    postList.forEach(item => {
+      item.postTimeFormat = new Date(item.postTime).Format('yyyy/MM/dd hh:mm')
+    });
+    this.setData({ postInfo: postList })
+    wx.hideToast({
+      success: (res) => {},
+    })
   },
 
   onGetOpenid: function() {

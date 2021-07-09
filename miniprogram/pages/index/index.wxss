@@ -25,3 +25,6 @@
 .input-container .cuIcon-search:hover {
   color: var(--green);
 }
+.timeline {
+  margin-top: 550rpx;
+}
