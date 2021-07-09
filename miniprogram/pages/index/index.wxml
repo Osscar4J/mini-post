@@ -23,7 +23,7 @@
       </block>
     </view>
   </view>
-  <view wx:else style="margin-top: 700rpx;">
+  <view wx:if="!postInfo || !postInfo.length" style="margin-top: 700rpx;">
     <view class="text-grey text-center">
       <view>
         <icon class="cuIcon-explore" style="font-size:200%"></icon>

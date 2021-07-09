@@ -57,7 +57,7 @@ Page({
       title: '正在查询...',
       icon: 'loading',
       mask: true,
-      duration: 10000
+      duration: 15000
     })
     let res = await MyPostApi.query({ data: { postNo: postNo } })
     let postList = res.data.content||[]
